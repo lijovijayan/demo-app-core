@@ -21,7 +21,7 @@ const collectionReadingOptions = {
 };
 
 const seeder = new Seeder(config);
-const repositories = ['seeder/repository'];
+const repositories = ['seed/repository'];
 
 repositories.forEach((repository) => {
     const collections = seeder.readCollectionsFromPath(

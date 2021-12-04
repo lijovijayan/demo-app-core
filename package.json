@@ -10,7 +10,7 @@
         "build": "tsc",
         "lint": "tsc --noEmit && eslint . --ext js,ts --quiet --fix",
         "prod:start": "node -r dotenv/config -r ts-node/register/transpile-only -r tsconfig-paths/register . dotenv_config_path=env/.prod.env",
-        "seed": "node seeder/index.js"
+        "seed": "node seed/index.js"
     },
     "repository": {
         "type": "git",

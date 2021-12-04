@@ -1,1 +1,1 @@
-export interface IApp {}
+export * from './model';
