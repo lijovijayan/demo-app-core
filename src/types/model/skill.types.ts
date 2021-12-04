@@ -3,3 +3,5 @@ export interface ISkill {
     name: string;
     students: number[];
 }
+
+export type IFSkill = Partial<ISkill>;

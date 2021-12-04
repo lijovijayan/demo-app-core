@@ -8,3 +8,5 @@ export interface ICollege {
     students: number[];
     cources: number[];
 }
+
+export type IFCollege = Partial<ICollege>;

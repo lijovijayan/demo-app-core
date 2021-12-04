@@ -3,3 +3,5 @@ export interface ICource {
     name: string;
     colleges: number[];
 }
+
+export type IFCource = Partial<ICource>;

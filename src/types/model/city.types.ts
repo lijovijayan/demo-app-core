@@ -4,3 +4,5 @@ export interface ICity {
     state_id: number;
     country_id: number;
 }
+
+export type IFCity = Partial<ICity>;

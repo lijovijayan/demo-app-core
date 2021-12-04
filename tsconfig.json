@@ -21,7 +21,7 @@
             "@config/*": ["config/*"],
             "@services/*": ["services/*"],
             "@utils/*": ["utils/*"],
-            "@types/*": ["types/*"],
+            "@types/*": ["types/*"]
         },
         "experimentalDecorators": true
     },

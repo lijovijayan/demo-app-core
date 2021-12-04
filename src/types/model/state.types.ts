@@ -3,3 +3,5 @@ export interface IState {
     name: string;
     country_id: number;
 }
+
+export type IFState = Partial<IState>;

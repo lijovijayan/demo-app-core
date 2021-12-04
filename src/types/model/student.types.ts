@@ -5,3 +5,5 @@ export interface IStudent {
     college_id: number;
     skills: number[];
 }
+
+export type IFStudent = Partial<IStudent>;
