@@ -1,0 +1,452 @@
+[
+    {
+        "name": "Anqing",
+        "id": 1101,
+        "country_id": 10001,
+        "state_id": 1001
+    },
+    {
+        "name": "Anqing Shi",
+        "id": 1102,
+        "country_id": 10001,
+        "state_id": 1001
+    },
+    {
+        "name": "Bengbu",
+        "id": 1103,
+        "country_id": 10001,
+        "state_id": 1001
+    },
+    {
+        "name": "Bozhou",
+        "id": 1104,
+        "country_id": 10001,
+        "state_id": 1001
+    },
+    {
+        "name": "Chaohu",
+        "id": 1105,
+        "country_id": 10001,
+        "state_id": 1001
+    },
+    {
+        "name": "Beijing",
+        "id": 1201,
+        "country_id": 10001,
+        "state_id": 1002
+    },
+    {
+        "name": "Changping",
+        "id": 1202,
+        "country_id": 10001,
+        "state_id": 1002
+    },
+    {
+        "name": "Daxing",
+        "id": 1203,
+        "country_id": 10001,
+        "state_id": 1002
+    },
+    {
+        "name": "Fangshan",
+        "id": 1204,
+        "country_id": 10001,
+        "state_id": 1002
+    },
+    {
+        "name": "Liangxiang",
+        "id": 1205,
+        "country_id": 10001,
+        "state_id": 1002
+    },
+    {
+        "name": "Beibei",
+        "id": 1301,
+        "country_id": 10001,
+        "state_id": 1003
+    },
+    {
+        "name": "Caijia",
+        "id": 1302,
+        "country_id": 10001,
+        "state_id": 1003
+    },
+    {
+        "name": "Chongqing",
+        "id": 1303,
+        "country_id": 10001,
+        "state_id": 1003
+    },
+    {
+        "name": "Dongxi",
+        "id": 1304,
+        "country_id": 10001,
+        "state_id": 1003
+    },
+    {
+        "name": "Fuling",
+        "id": 1305,
+        "country_id": 10001,
+        "state_id": 1003
+    },
+    {
+        "name": "Abondance",
+        "id": 2101,
+        "country_id": 10002,
+        "state_id": 2001
+    },
+    {
+        "name": "Abrest",
+        "id": 2102,
+        "country_id": 10002,
+        "state_id": 2001
+    },
+    {
+        "name": "Aigueblanche",
+        "id": 2103,
+        "country_id": 10002,
+        "state_id": 2001
+    },
+    {
+        "name": "Aigueperse",
+        "id": 2104,
+        "country_id": 10002,
+        "state_id": 2001
+    },
+    {
+        "name": "Aime",
+        "id": 2105,
+        "country_id": 10002,
+        "state_id": 2001
+    },
+    {
+        "name": "Ahuy",
+        "id": 2201,
+        "country_id": 10002,
+        "state_id": 2002
+    },
+    {
+        "name": "Aillant-sur-Tholon",
+        "id": 2202,
+        "country_id": 10002,
+        "state_id": 2002
+    },
+    {
+        "name": "Aillevillers-et-Lyaumont",
+        "id": 2203,
+        "country_id": 10002,
+        "state_id": 2002
+    },
+    {
+        "name": "Aiserey",
+        "id": 2204,
+        "country_id": 10002,
+        "state_id": 2002
+    },
+    {
+        "name": "Ancy-le-Franc",
+        "id": 2205,
+        "country_id": 10002,
+        "state_id": 2002
+    },
+    {
+        "name": "Acigné",
+        "id": 2301,
+        "country_id": 10002,
+        "state_id": 2003
+    },
+    {
+        "name": "Allaire",
+        "id": 2302,
+        "country_id": 10002,
+        "state_id": 2003
+    },
+    {
+        "name": "Amanlis",
+        "id": 2303,
+        "country_id": 10002,
+        "state_id": 2003
+    },
+    {
+        "name": "Ambon",
+        "id": 2304,
+        "country_id": 10002,
+        "state_id": 2003
+    },
+    {
+        "name": "Antrain",
+        "id": 2305,
+        "country_id": 10002,
+        "state_id": 2003
+    },
+    {
+        "name": "Addanki",
+        "id": 3101,
+        "country_id": 10003,
+        "state_id": 3001
+    },
+    {
+        "name": "Adoni",
+        "id": 3102,
+        "country_id": 10003,
+        "state_id": 3001
+    },
+    {
+        "name": "Akasahebpet",
+        "id": 3103,
+        "country_id": 10003,
+        "state_id": 3001
+    },
+    {
+        "name": "Akividu",
+        "id": 3104,
+        "country_id": 10003,
+        "state_id": 3001
+    },
+    {
+        "name": "Akkarampalle",
+        "id": 3105,
+        "country_id": 10003,
+        "state_id": 3001
+    },
+    {
+        "name": "Along",
+        "id": 3201,
+        "country_id": 10003,
+        "state_id": 3002
+    },
+    {
+        "name": "Anjaw",
+        "id": 3202,
+        "country_id": 10003,
+        "state_id": 3002
+    },
+    {
+        "name": "Basar",
+        "id": 3203,
+        "country_id": 10003,
+        "state_id": 3002
+    },
+    {
+        "name": "Bomdila",
+        "id": 3204,
+        "country_id": 10003,
+        "state_id": 3002
+    },
+    {
+        "name": "Changlang",
+        "id": 3205,
+        "country_id": 10003,
+        "state_id": 3002
+    },
+    {
+        "name": "Abhayapuri",
+        "id": 3301,
+        "country_id": 10003,
+        "state_id": 3003
+    },
+    {
+        "name": "Amguri",
+        "id": 3302,
+        "country_id": 10003,
+        "state_id": 3003
+    },
+    {
+        "name": "Badarpur",
+        "id": 3303,
+        "country_id": 10003,
+        "state_id": 3003
+    },
+    {
+        "name": "Baksa",
+        "id": 3304,
+        "country_id": 10003,
+        "state_id": 3003
+    },
+    {
+        "name": "Barpathar",
+        "id": 3305,
+        "country_id": 10003,
+        "state_id": 3003
+    },
+    {
+        "name": "Abbey Wood",
+        "id": 4101,
+        "country_id": 10004,
+        "state_id": 4001
+    },
+    {
+        "name": "Abbots Bromley",
+        "id": 4102,
+        "country_id": 10004,
+        "state_id": 4001
+    },
+    {
+        "name": "Abbots Langley",
+        "id": 4103,
+        "country_id": 10004,
+        "state_id": 4001
+    },
+    {
+        "name": "Abbotskerswell",
+        "id": 4104,
+        "country_id": 10004,
+        "state_id": 4001
+    },
+    {
+        "name": "Abbotts Ann",
+        "id": 4105,
+        "country_id": 10004,
+        "state_id": 4001
+    },
+    {
+        "name": "Ahoghill",
+        "id": 4201,
+        "country_id": 10004,
+        "state_id": 4002
+    },
+    {
+        "name": "Annahilt",
+        "id": 4202,
+        "country_id": 10004,
+        "state_id": 4002
+    },
+    {
+        "name": "Annalong",
+        "id": 4203,
+        "country_id": 10004,
+        "state_id": 4002
+    },
+    {
+        "name": "Antrim",
+        "id": 4204,
+        "country_id": 10004,
+        "state_id": 4002
+    },
+    {
+        "name": "Antrim and Newtownabbey",
+        "id": 4205,
+        "country_id": 10004,
+        "state_id": 4002
+    },
+    {
+        "name": "Aberchirder",
+        "id": 4301,
+        "country_id": 10004,
+        "state_id": 4003
+    },
+    {
+        "name": "Aberdeen",
+        "id": 4302,
+        "country_id": 10004,
+        "state_id": 4003
+    },
+    {
+        "name": "Aberdeen City",
+        "id": 4303,
+        "country_id": 10004,
+        "state_id": 4003
+    },
+    {
+        "name": "Aberdeenshire",
+        "id": 4304,
+        "country_id": 10004,
+        "state_id": 4003
+    },
+    {
+        "name": "Aberdour",
+        "id": 4305,
+        "country_id": 10004,
+        "state_id": 4003
+    },
+    {
+        "name": "Abbeville",
+        "id": 5101,
+        "country_id": 10005,
+        "state_id": 5001
+    },
+    {
+        "name": "Adamsville",
+        "id": 5102,
+        "country_id": 10005,
+        "state_id": 5001
+    },
+    {
+        "name": "Alabaster",
+        "id": 5103,
+        "country_id": 10005,
+        "state_id": 5001
+    },
+    {
+        "name": "Albertville",
+        "id": 5104,
+        "country_id": 10005,
+        "state_id": 5001
+    },
+    {
+        "name": "Alexander City",
+        "id": 5105,
+        "country_id": 10005,
+        "state_id": 5001
+    },
+    {
+        "name": "Akutan",
+        "id": 5201,
+        "country_id": 10005,
+        "state_id": 5002
+    },
+    {
+        "name": "Aleutians East Borough",
+        "id": 5202,
+        "country_id": 10005,
+        "state_id": 5002
+    },
+    {
+        "name": "Aleutians West Census Area",
+        "id": 5203,
+        "country_id": 10005,
+        "state_id": 5002
+    },
+    {
+        "name": "Anchor Point",
+        "id": 5204,
+        "country_id": 10005,
+        "state_id": 5002
+    },
+    {
+        "name": "Anchorage",
+        "id": 5205,
+        "country_id": 10005,
+        "state_id": 5002
+    },
+    {
+        "name": "Ahwatukee Foothills",
+        "id": 5301,
+        "country_id": 10005,
+        "state_id": 5003
+    },
+    {
+        "name": "Ajo",
+        "id": 5302,
+        "country_id": 10005,
+        "state_id": 5003
+    },
+    {
+        "name": "Alhambra",
+        "id": 5303,
+        "country_id": 10005,
+        "state_id": 5003
+    },
+    {
+        "name": "Anthem",
+        "id": 5304,
+        "country_id": 10005,
+        "state_id": 5003
+    },
+    {
+        "name": "Apache County",
+        "id": 5305,
+        "country_id": 10005,
+        "state_id": 5003
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Computer Science",
+        "id": 800001,
+        "colleges": []
+    },
+    {
+        "name": "Robotics and Automation",
+        "id": 800002,
+        "colleges": []
+    },
+    {
+        "name": "Electronics Engineering",
+        "id": 800003,
+        "colleges": []
+    },
+    {
+        "name": "EC Engineering",
+        "id": 800004,
+        "colleges": []
+    },
+    {
+        "name": "Electrical Engineering",
+        "id": 800005,
+        "colleges": []
+    },
+    {
+        "name": "Data Science",
+        "id": 800006,
+        "colleges": []
+    },
+    {
+        "name": "Information Technology",
+        "id": 800007,
+        "colleges": []
+    },
+    {
+        "name": "Cyber Security and Forensics",
+        "id": 800008,
+        "colleges": []
+    },
+    {
+        "name": "Artificial Intelligence",
+        "id": 800009,
+        "colleges": []
+    }
+]
