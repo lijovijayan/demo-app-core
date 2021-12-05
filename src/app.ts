@@ -9,16 +9,16 @@ import { DATABASE } from '@services';
 
 const app = express();
 
-// middlewares
+// initialize connections
+DATABASE.connect();
+// END - initialize connections
+
+// apply middlewares
 app.use(morgan('combined'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// END - middlewares
-
-// initialize connections
-DATABASE.connect();
-// END - initialize connections
+// END - apply middlewares
 
 app.use('/', (req, res, next) => {
     console.log(
