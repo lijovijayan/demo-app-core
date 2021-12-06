@@ -1,5 +1,6 @@
 import { CollegeService } from '@services';
 import { IFCollege } from '@types';
+import { DEFAULT_FILTER } from 'constants/filter.costants';
 import { Request, Response, NextFunction } from 'express';
 
 export class CollegeController {
@@ -23,7 +24,11 @@ export class CollegeController {
         res: Response,
         _next: NextFunction
     ): Promise<Response<any, Record<string, any>>> => {
-        const filter: IFCollege = req.body;
+        const _filter: IFCollege = req.body;
+        const filter: IFCollege = {
+            ..._filter,
+            pagination: _filter.pagination ? _filter.pagination : DEFAULT_FILTER
+        };
         try {
             const colleges = await this.collegeService.getCollegesWithFilter(
                 filter

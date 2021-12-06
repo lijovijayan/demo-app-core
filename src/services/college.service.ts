@@ -1,5 +1,6 @@
 import { College } from '@models';
-import { ICollege, IFCollege } from '@types';
+import { ICollege, IFCollege, IPaginatedResponse } from '@types';
+import { getOrderByObject, getSearchKeyRegexExp } from '@utils';
 
 export class CollegeService {
     constructor() {
@@ -9,19 +10,50 @@ export class CollegeService {
     getColleges(): Promise<ICollege[]> {
         return new Promise(async (resolve, reject) => {
             try {
-                const city: ICollege[] = await College.find();
-                resolve(city);
+                const colleges: ICollege[] = await College.find();
+                resolve(colleges);
             } catch (err) {
                 reject(err);
             }
         });
     }
 
-    getCollegesWithFilter(filter: IFCollege): Promise<ICollege[]> {
+    getCollegesWithFilter(
+        _filter: IFCollege
+    ): Promise<IPaginatedResponse<ICollege[]>> {
         return new Promise(async (resolve, reject) => {
             try {
-                const city: ICollege[] = await College.find(filter);
-                resolve(city);
+                const { pagination, name = '', ...filter }: IFCollege = _filter;
+
+                const {
+                    page,
+                    pageSize,
+                    orderBy: _orderBy = [],
+                    searchKey: _searchKey = ''
+                } = pagination;
+
+                const searchKey = getSearchKeyRegexExp(_searchKey, name);
+                const orderBy = getOrderByObject(_orderBy);
+
+                const colleges: ICollege[] = await College.find({
+                    ...filter,
+                    ...(searchKey ? { name: searchKey } : {})
+                })
+                    .sort(orderBy)
+                    .skip((page - 1) * pageSize)
+                    .limit(pageSize);
+
+                const totalRecords = await College.countDocuments().exec();
+
+                const response: IPaginatedResponse<ICollege[]> = {
+                    data: colleges,
+                    pagination: {
+                        ...pagination,
+                        totalRecords: totalRecords
+                    }
+                };
+
+                resolve(response);
             } catch (err) {
                 reject(err);
             }
@@ -31,8 +63,8 @@ export class CollegeService {
     getCollegeById(id: number): Promise<ICollege> {
         return new Promise(async (resolve, reject) => {
             try {
-                const city: ICollege = await College.findOne({ id });
-                resolve(city);
+                const college: ICollege = await College.findOne({ id });
+                resolve(college);
             } catch (err) {
                 reject(err);
             }

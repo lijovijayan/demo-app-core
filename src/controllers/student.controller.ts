@@ -1,5 +1,6 @@
 import { StudentService } from '@services';
 import { IFStudent } from '@types';
+import { DEFAULT_FILTER } from 'constants/filter.costants';
 import { Request, Response, NextFunction } from 'express';
 
 export class StudentController {
@@ -23,7 +24,11 @@ export class StudentController {
         res: Response,
         _next: NextFunction
     ): Promise<Response<any, Record<string, any>>> => {
-        const filter: IFStudent = req.body;
+        const _filter: IFStudent = req.body;
+        const filter: IFStudent = {
+            ..._filter,
+            pagination: _filter.pagination ? _filter.pagination : DEFAULT_FILTER
+        };
         try {
             const skills = await this.skillService.getStudentsWithFilter(
                 filter

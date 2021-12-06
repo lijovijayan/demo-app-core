@@ -1,3 +1,5 @@
+import { IPagination } from '@types';
+
 export interface ICollege {
     id: number;
     name: string;
@@ -9,4 +11,6 @@ export interface ICollege {
     cources: number[];
 }
 
-export type IFCollege = Partial<ICollege>;
+export interface IFCollege extends Partial<ICollege> {
+    pagination: IPagination;
+}

@@ -1,3 +1,5 @@
+import { IPagination } from '@types';
+
 export interface IStudent {
     id: number;
     name: string;
@@ -6,4 +8,6 @@ export interface IStudent {
     skills: number[];
 }
 
-export type IFStudent = Partial<IStudent>;
+export interface IFStudent extends Partial<IStudent> {
+    pagination: IPagination;
+}
