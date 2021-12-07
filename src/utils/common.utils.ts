@@ -13,6 +13,7 @@ export function getSearchKeyRegexExp(
     return undefined;
 }
 export function getOrderByObject(_orderBy: IOrderBy[]): Object {
+    if (_orderBy.length <= 0) return { name: 1 };
     let orderBy = {};
     _orderBy.forEach((__orderBy) => {
         if (__orderBy.key && typeof __orderBy.orderByDesc === 'boolean') {

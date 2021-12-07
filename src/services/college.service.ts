@@ -1,5 +1,11 @@
+import { COLLEGE_AGGREGATION } from '@aggregations';
 import { College } from '@models';
-import { ICollege, IFCollege, IPaginatedResponse } from '@types';
+import {
+    ICollege,
+    ICollegeObject,
+    IFCollege,
+    IPaginatedResponse
+} from '@types';
 import { getOrderByObject, getSearchKeyRegexExp } from '@utils';
 
 export class CollegeService {
@@ -7,10 +13,12 @@ export class CollegeService {
         // do nothing.
     }
 
-    getColleges(): Promise<ICollege[]> {
+    getColleges(): Promise<ICollegeObject[]> {
         return new Promise(async (resolve, reject) => {
             try {
-                const colleges: ICollege[] = await College.find();
+                const colleges: ICollegeObject[] = await College.aggregate(
+                    COLLEGE_AGGREGATION
+                );
                 resolve(colleges);
             } catch (err) {
                 reject(err);
@@ -20,10 +28,10 @@ export class CollegeService {
 
     getCollegesWithFilter(
         _filter: IFCollege
-    ): Promise<IPaginatedResponse<ICollege[]>> {
+    ): Promise<IPaginatedResponse<ICollegeObject[]>> {
         return new Promise(async (resolve, reject) => {
             try {
-                const { pagination, name = '', ...filter }: IFCollege = _filter;
+                let { pagination, name = '', ...filter }: IFCollege = _filter;
 
                 const {
                     page,
@@ -35,17 +43,24 @@ export class CollegeService {
                 const searchKey = getSearchKeyRegexExp(_searchKey, name);
                 const orderBy = getOrderByObject(_orderBy);
 
-                const colleges: ICollege[] = await College.find({
+                filter = {
                     ...filter,
                     ...(searchKey ? { name: searchKey } : {})
-                })
+                };
+
+                const colleges: ICollegeObject[] = await College.aggregate([
+                    {
+                        $match: filter
+                    },
+                    ...COLLEGE_AGGREGATION
+                ])
                     .sort(orderBy)
                     .skip((page - 1) * pageSize)
                     .limit(pageSize);
 
                 const totalRecords = await College.countDocuments().exec();
 
-                const response: IPaginatedResponse<ICollege[]> = {
+                const response: IPaginatedResponse<ICollegeObject[]> = {
                     data: colleges,
                     pagination: {
                         ...pagination,

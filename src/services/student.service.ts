@@ -1,5 +1,11 @@
+import { STUDENT_AGGREGATION } from '@aggregations';
 import { Student } from '@models';
-import { IStudent, IFStudent, IPaginatedResponse } from '@types';
+import {
+    IStudent,
+    IFStudent,
+    IPaginatedResponse,
+    IStudentObject
+} from '@types';
 import { getOrderByObject, getSearchKeyRegexExp } from '@utils';
 
 export class StudentService {
@@ -7,10 +13,12 @@ export class StudentService {
         // do nothing.
     }
 
-    getStudents(): Promise<IStudent[]> {
+    getStudents(): Promise<IStudentObject[]> {
         return new Promise(async (resolve, reject) => {
             try {
-                const students: IStudent[] = await Student.find();
+                const students: IStudentObject[] = await Student.aggregate(
+                    STUDENT_AGGREGATION
+                );
                 resolve(students);
             } catch (err) {
                 reject(err);
@@ -20,10 +28,10 @@ export class StudentService {
 
     getStudentsWithFilter(
         _filter: IFStudent
-    ): Promise<IPaginatedResponse<IStudent[]>> {
+    ): Promise<IPaginatedResponse<IStudentObject[]>> {
         return new Promise(async (resolve, reject) => {
             try {
-                const { pagination, name = '', ...filter }: IFStudent = _filter;
+                let { pagination, name = '', ...filter }: IFStudent = _filter;
 
                 const {
                     page,
@@ -35,17 +43,24 @@ export class StudentService {
                 const searchKey = getSearchKeyRegexExp(_searchKey, name);
                 const orderBy = getOrderByObject(_orderBy);
 
-                const students: IStudent[] = await Student.find({
+                filter = {
                     ...filter,
                     ...(searchKey ? { name: searchKey } : {})
-                })
+                };
+
+                const students: IStudentObject[] = await Student.aggregate([
+                    {
+                        $match: filter
+                    },
+                    ...STUDENT_AGGREGATION
+                ])
                     .sort(orderBy)
                     .skip((page - 1) * pageSize)
                     .limit(pageSize);
 
                 const totalRecords = await Student.countDocuments().exec();
 
-                const response: IPaginatedResponse<IStudent[]> = {
+                const response: IPaginatedResponse<IStudentObject[]> = {
                     data: students,
                     pagination: {
                         ...pagination,

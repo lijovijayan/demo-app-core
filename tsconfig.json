@@ -15,13 +15,15 @@
             "@services": ["services"],
             "@utils": ["utils"],
             "@types": ["types"],
+            "@aggregations": ["aggregations"],
             "@models/*": ["models/*"],
             "@routes/*": ["routes/*"],
             "@controllers/*": ["controllers/*"],
             "@config/*": ["config/*"],
             "@services/*": ["services/*"],
             "@utils/*": ["utils/*"],
-            "@types/*": ["types/*"]
+            "@types/*": ["types/*"],
+            "@aggregations/*": ["aggregations/*"]
         },
         "experimentalDecorators": true
     },

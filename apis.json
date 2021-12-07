@@ -1,0 +1,75 @@
+{
+    "countries": {
+        "/": [
+            {
+                "method": "GET",
+                "description": "to fetch list of all countries",
+                "request": "",
+                "response": [
+                    {
+                        "id": "number",
+                        "name": "string"
+                    }
+                ]
+            },
+            {
+                "method": "POST",
+                "description": "to fetch list of countries with filters",
+                "request": {
+                    "-id": "number",
+                    "-name": "string"
+                },
+                "response": [
+                    {
+                        "id": "number",
+                        "name": "string"
+                    }
+                ]
+            }
+        ],
+        "/:id": [
+            {
+                "method": "GET",
+                "description": "to fetch a country with id",
+                "request": "",
+                "response": {
+                    "id": "number",
+                    "name": "string"
+                }
+            }
+        ]
+    },
+    "states": {
+        "/": [
+            {
+                "method": "GET",
+                "description": "to fetch list of all states",
+                "request": "",
+                "response": [
+                    {
+                        "id": "number",
+                        "name": "string",
+                        "country_id": "number"
+                    }
+                ]
+            }
+        ]
+    },
+    "city": {
+        "/": [
+            {
+                "method": "GET",
+                "description": "to fetch list of all states",
+                "request": "",
+                "response": [
+                    {
+                        "id": "number",
+                        "name": "string",
+                        "state_id": "number",
+                        "country_id": "number"
+                    }
+                ]
+            }
+        ]
+    }
+}
