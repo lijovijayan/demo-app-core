@@ -46,7 +46,8 @@ export class CollegeService {
                 } = pagination;
 
                 const searchKey = getSearchKeyRegexExp(_searchKey, name);
-                const orderBy = getOrderByObject(_orderBy);
+                const orderBy: Record<string, 1 | -1 | { $meta: 'textScore' }> =
+                    getOrderByObject(_orderBy);
 
                 filter = {
                     ...filter,

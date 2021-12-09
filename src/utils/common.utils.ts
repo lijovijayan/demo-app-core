@@ -12,7 +12,9 @@ export function getSearchKeyRegexExp(
     }
     return undefined;
 }
-export function getOrderByObject(_orderBy: IOrderBy[]): Object {
+export function getOrderByObject(
+    _orderBy: IOrderBy[]
+): Record<string, 1 | -1 | { $meta: 'textScore' }> {
     if (_orderBy.length <= 0) return { name: 1 };
     let orderBy = {};
     _orderBy.forEach((__orderBy) => {
