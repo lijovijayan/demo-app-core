@@ -12,6 +12,7 @@ export function getSearchKeyRegexExp(
     }
     return undefined;
 }
+
 export function getOrderByObject(
     _orderBy: IOrderBy[]
 ): Record<string, 1 | -1 | { $meta: 'textScore' }> {

@@ -2,10 +2,6 @@ import { Cource } from '@models';
 import { ICource, IFCource } from '@types';
 
 export class CourceService {
-    constructor() {
-        // do nothing.
-    }
-
     getCources(): Promise<ICource[]> {
         return new Promise(async (resolve, reject) => {
             try {

@@ -2,10 +2,6 @@ import { City } from '@models';
 import { ICity, IFCity } from '@types';
 
 export class CityService {
-    constructor() {
-        // do nothing.
-    }
-
     getCities(): Promise<ICity[]> {
         return new Promise(async (resolve, reject) => {
             try {

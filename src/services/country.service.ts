@@ -2,10 +2,6 @@ import { Country } from '@models';
 import { ICountry, IFCountry } from '@types';
 
 export class CountryService {
-    constructor() {
-        // do nothing.
-    }
-
     getCountrys(): Promise<ICountry[]> {
         return new Promise(async (resolve, reject) => {
             try {

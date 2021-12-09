@@ -9,10 +9,6 @@ import {
 import { getOrderByObject, getSearchKeyRegexExp } from '@utils';
 
 export class StudentService {
-    constructor() {
-        // do nothing.
-    }
-
     getStudents(): Promise<IStudentObject[]> {
         return new Promise(async (resolve, reject) => {
             try {

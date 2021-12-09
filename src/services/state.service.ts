@@ -2,10 +2,6 @@ import { State } from '@models';
 import { IState, IFState } from '@types';
 
 export class StateService {
-    constructor() {
-        // do nothing.
-    }
-
     getStates(): Promise<IState[]> {
         return new Promise(async (resolve, reject) => {
             try {

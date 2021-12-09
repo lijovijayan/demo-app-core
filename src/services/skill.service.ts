@@ -2,10 +2,6 @@ import { Skill } from '@models';
 import { ISkill, IFSkill } from '@types';
 
 export class SkillService {
-    constructor() {
-        // do nothing.
-    }
-
     getSkills(): Promise<ISkill[]> {
         return new Promise(async (resolve, reject) => {
             try {
