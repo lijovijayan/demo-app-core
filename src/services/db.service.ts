@@ -2,6 +2,7 @@ import { APP } from '@config';
 import mongoose from 'mongoose';
 
 async function connect() {
+    // mongoose.set('debug', true);
     mongoose
         .connect(`${APP.databaseURL}${APP.database}`)
         .then(() => {

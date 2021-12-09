@@ -2,76 +2,76 @@
     {
         "name": "Anhui",
         "id": 1001,
-        "contry_id": 10001
+        "country_id": 10001
     },
     {
         "name": "Beijing",
         "id": 1002,
-        "contry_id": 10001
+        "country_id": 10001
     },
     {
         "name": "Chongqing",
         "id": 1003,
-        "contry_id": 10001
+        "country_id": 10001
     },
     {
         "name": "Auvergne-Rhône-Alpes",
         "id": 2001,
-        "contry_id": 10002
+        "country_id": 10002
     },
     {
         "name": "Bourgogne-Franche-Comté",
         "id": 2002,
-        "contry_id": 10002
+        "country_id": 10002
     },
     {
         "name": "Brittany",
         "id": 2003,
-        "contry_id": 10002
+        "country_id": 10002
     },
     {
         "name": "Andhra Pradesh",
         "id": 3001,
-        "contry_id": 10003
+        "country_id": 10003
     },
     {
         "name": "Arunachal Pradesh",
         "id": 3002,
-        "contry_id": 10003
+        "country_id": 10003
     },
     {
         "name": "Assam",
         "id": 3003,
-        "contry_id": 10003
+        "country_id": 10003
     },
     {
         "name": "England",
         "id": 4001,
-        "contry_id": 10004
+        "country_id": 10004
     },
     {
         "name": "Northern Ireland",
         "id": 4002,
-        "contry_id": 10004
+        "country_id": 10004
     },
     {
         "name": "Scotland",
         "id": 4003,
-        "contry_id": 10004
+        "country_id": 10004
     },
     {
         "name": "Alabama",
         "id": 5001,
-        "contry_id": 10005
+        "country_id": 10005
     },
     {
         "name": "Alaska",
         "id": 5002,
-        "contry_id": 10005
+        "country_id": 10005
     },
     {
         "name": "Arizona",
         "id": 5003,
-        "contry_id": 10005
+        "country_id": 10005
     }
 ]

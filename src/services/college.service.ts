@@ -31,7 +31,12 @@ export class CollegeService {
     ): Promise<IPaginatedResponse<ICollegeObject[]>> {
         return new Promise(async (resolve, reject) => {
             try {
-                let { pagination, name = '', ...filter }: IFCollege = _filter;
+                let {
+                    pagination,
+                    name = '',
+                    cources,
+                    ...filter
+                }: IFCollege = _filter;
 
                 const {
                     page,
@@ -45,20 +50,35 @@ export class CollegeService {
 
                 filter = {
                     ...filter,
+                    ...(cources?.length > 0
+                        ? { cources: cources[0] }
+                        : undefined),
                     ...(searchKey ? { name: searchKey } : {})
                 };
 
-                const colleges: ICollegeObject[] = await College.aggregate([
+                const _result = await College.aggregate([
                     {
                         $match: filter
                     },
-                    ...COLLEGE_AGGREGATION
-                ])
-                    .sort(orderBy)
-                    .skip((page - 1) * pageSize)
-                    .limit(pageSize);
+                    ...COLLEGE_AGGREGATION,
+                    {
+                        $facet: {
+                            data: [
+                                { $skip: (page - 1) * pageSize },
+                                { $limit: pageSize }
+                            ],
+                            totalCount: [
+                                {
+                                    $count: 'count'
+                                }
+                            ]
+                        }
+                    }
+                ]).sort(orderBy);
 
-                const totalRecords = await College.countDocuments().exec();
+                const colleges: ICollegeObject[] = _result?.[0]?.data || [];
+
+                const totalRecords = _result?.[0]?.totalCount?.[0]?.count || 0;
 
                 const response: IPaginatedResponse<ICollegeObject[]> = {
                     data: colleges,

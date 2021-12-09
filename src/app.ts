@@ -14,7 +14,7 @@ DATABASE.connect();
 // END - initialize connections
 
 // apply middlewares
-app.use(morgan('combined'));
+app.use(morgan('short'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

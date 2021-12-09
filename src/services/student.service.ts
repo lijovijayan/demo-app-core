@@ -31,7 +31,12 @@ export class StudentService {
     ): Promise<IPaginatedResponse<IStudentObject[]>> {
         return new Promise(async (resolve, reject) => {
             try {
-                let { pagination, name = '', ...filter }: IFStudent = _filter;
+                let {
+                    pagination,
+                    skills,
+                    name = '',
+                    ...filter
+                }: IFStudent = _filter;
 
                 const {
                     page,
@@ -45,20 +50,33 @@ export class StudentService {
 
                 filter = {
                     ...filter,
-                    ...(searchKey ? { name: searchKey } : {})
+                    ...(searchKey ? { name: searchKey } : {}),
+                    ...(skills?.length > 0 ? { skills: skills[0] } : undefined)
                 };
 
-                const students: IStudentObject[] = await Student.aggregate([
+                const _result = await Student.aggregate([
                     {
                         $match: filter
                     },
-                    ...STUDENT_AGGREGATION
-                ])
-                    .sort(orderBy)
-                    .skip((page - 1) * pageSize)
-                    .limit(pageSize);
+                    ...STUDENT_AGGREGATION,
+                    {
+                        $facet: {
+                            data: [
+                                { $skip: (page - 1) * pageSize },
+                                { $limit: pageSize }
+                            ],
+                            totalCount: [
+                                {
+                                    $count: 'count'
+                                }
+                            ]
+                        }
+                    }
+                ]).sort(orderBy);
 
-                const totalRecords = await Student.countDocuments().exec();
+                const students: IStudentObject[] = _result?.[0]?.data || [];
+
+                const totalRecords = _result?.[0]?.totalCount?.[0]?.count || 0;
 
                 const response: IPaginatedResponse<IStudentObject[]> = {
                     data: students,
