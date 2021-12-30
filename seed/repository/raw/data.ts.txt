@@ -110,18 +110,18 @@
 // console.log(students[0]);
 // console.log(colleges[0]);
 
-// storeData(skills, '/home/lijovijayan/projects/oneshot-core/dummy/skills.json');
+// storeData(skills, '/home/lijovijayan/projects/demo-app-core/dummy/skills.json');
 // storeData(
 //     cources,
-//     '/home/lijovijayan/projects/oneshot-core/dummy/cources.json'
+//     '/home/lijovijayan/projects/demo-app-core/dummy/cources.json'
 // );
 // storeData(
 //     students,
-//     '/home/lijovijayan/projects/oneshot-core/dummy/students.json'
+//     '/home/lijovijayan/projects/demo-app-core/dummy/students.json'
 // );
 // storeData(
 //     colleges,
-//     '/home/lijovijayan/projects/oneshot-core/dummy/colleges.json'
+//     '/home/lijovijayan/projects/demo-app-core/dummy/colleges.json'
 // );
 
 // // utils

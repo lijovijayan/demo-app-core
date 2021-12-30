@@ -4,7 +4,7 @@
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/lijovijayan/oneshot-web.git
+   git clone https://github.com/lijovijayan/demo-app-web.git
    ```
 2. Install packages
    ```sh
@@ -24,7 +24,7 @@
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/lijovijayan/oneshot-core.git
+   git clone https://github.com/lijovijayan/demo-app-core.git
    ```
 2. Install and setup Mongo DB
    ```sh
